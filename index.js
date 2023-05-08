@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // look through each item in the array
+  for (let i = 0; i < array.length; i++) {
+    // look through the rest of the array
+    for (let j = i + 1; j < array.length; j++) {
+      // check if the sum is equal the target
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
@@ -7,7 +17,8 @@ function hasTargetSum(array, target) {
 */
 
 /* 
-  Add your pseudocode here
+  1- The function should return true if the sum of the numbers in array match the target.
+  else return false.
 */
 
 /*
